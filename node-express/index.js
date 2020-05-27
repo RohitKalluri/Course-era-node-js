@@ -12,7 +12,8 @@ app.use(bodyParser.json());
 
 const dishRouter = require('./routes/dishRouter');
 
-app.use('/dishes', dishRouter);
+app.use('/dishes', dishRouter.first);
+app.use('/dishes/dishId',dishRouter.second)
 
 app.use(express.static(__dirname + '/public'));
 
